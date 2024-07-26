@@ -8,7 +8,7 @@
         {% endblock %}
         {% block actions-submit %}
             <button type="submit" class="btn {{ jazzmin_ui.button_classes.primary }}" style="margin-right: 5px; margin-left: 15px;" title="{% trans "Run the selected action" %}" name="index" value="{{ action_index|default:0 }}">
-                {% trans "Go" %}
+                {% trans "Баталгаажуулах" %}
             </button>
         {% endblock %}
         {% block actions-counter %}
@@ -18,7 +18,7 @@
                     <span class="all hidden">{{ selection_note_all }}</span>
                     <span class="question hidden">
                         <a href="#" title="{% trans "Click here to select the objects across all pages" %}">
-                            {% blocktrans with cl.result_count as total_count %}Select all {{ total_count }} {{ module_name }}{% endblocktrans %}
+                            {% blocktrans with cl.result_count as total_count %}Бүгдийг сонгох {{ total_count }} {{ module_name }}{% endblocktrans %}
                         </a>
                     </span>
                     <span class="clear" style="display: none;"><a href="#">{% trans "Clear selection" %}</a></span>
