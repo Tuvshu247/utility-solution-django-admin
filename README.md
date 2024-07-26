@@ -1,4 +1,3 @@
-
 # Django jazzmin (Jazzy Admin)
 
 ## Project Status
@@ -12,6 +11,9 @@ Help needed with:
 - Frontend fixes and UI improvements
 - Testing
 - Documentation
+- ```python3
+  python3 -m build --sdist
+  ```
 
 Pull requests are welcome, though ive been pre-occupied with other projects lately, so have not been able to review
 them as quickly as I would like, but im trying to get through them all now, hopefully with some outside help.
@@ -116,12 +118,12 @@ See [Documentation](https://django-jazzmin.readthedocs.io) or [Test App](https:/
 
 ## Thanks
 
-This was initially a Fork of <https://github.com/wuyue92tree/django-adminlte-ui> that we refactored so much we thought it
+This was initially a Fork of [https://github.com/wuyue92tree/django-adminlte-ui](https://github.com/wuyue92tree/django-adminlte-ui) that we refactored so much we thought it
 deserved its own package, big thanks to @wuyue92tree for all of his initial hard work, we are still patching into that
 project were possible, but this project has taken a different direction.
 
 The javascript modal implementation uses some code from [django-admin-interface](https://github.com/fabiocaccamo/django-admin-interface/blob/master/admin_interface/static/admin/js/popup_response.js), so thanks to @fabiocaccamo for original work
 
-- Based on AdminLTE 3: <https://adminlte.io/>
-- Using Bootstrap 4: <https://getbootstrap.com/>
-- Using Font Awesome 5: <https://fontawesome.com/>
+- Based on AdminLTE 3: [https://adminlte.io/](https://adminlte.io/)
+- Using Bootstrap 4: [https://getbootstrap.com/](https://getbootstrap.com/)
+- Using Font Awesome 5: [https://fontawesome.com/](https://fontawesome.com/)
