@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "utility-solution-django-admin-panel"
-version = "0.0.8"
+version = "0.0.19"
 description = "Drop-in theme for django admin, that utilises AdminLTE 3 & Bootstrap 4 to make yo' admin look jazzy"
 license = "MIT"
 authors = ["Shipit <packages@shipit.ltd>"]

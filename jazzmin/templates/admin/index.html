@@ -70,7 +70,7 @@
     <div class="col-lg-3 col-12">
         <div id="content-related">
             <div class="module" id="recent-actions-module">
-                <h4 class="mb-3">{% trans 'Recent actions' %}</h4>
+                <h4 class="mb-3">{% trans 'Сүүлд хийсэн өөрчлөлтүүд' %}</h4>
                 {% load log %}
                 {% get_admin_log 6 as admin_log for_user user %}
                 {% if not admin_log %}

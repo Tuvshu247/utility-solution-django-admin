@@ -3,7 +3,7 @@
 
 {% block breadcrumbs %}
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'admin:index' %}" title="{% trans 'Go back to admin homepage' %}"><i class="fas fa-tachometer-alt"></i> {% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'admin:index' %}" title="{% trans 'Go back to admin homepage' %}"><i class="fas fa-tachometer-alt"></i> {% trans 'Нүүр хуудас' %}</a></li>
         <li class="breadcrumb-item"><a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a></li>
         <li class="breadcrumb-item">
             <a href="{% url 'admin:filer-directory_listing-root' %}" title="{% trans 'Go back to' %} '{% trans 'root'|title %}' {% trans 'folder' %}">{% trans "root"|title %}</a>
