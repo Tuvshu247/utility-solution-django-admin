@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-jazzmin"
+name = "utility-solution-django-admin-panel"
 version = "0.0.0"
 description = "Drop-in theme for django admin, that utilises AdminLTE 3 & Bootstrap 4 to make yo' admin look jazzy"
 license = "MIT"
@@ -40,23 +40,23 @@ python = ">=3.8"
 django = ">=4.2"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^3.2.4" # unparallelled debugging in django
-Werkzeug = "^2.0.2"             # support for werkzeug debugger in runserver_plus
-django-extensions = "^3.1.5"    # Django Sugar for development
-pytest = "^6.2.5"               # Test runner
-pytest-django = "^4.5.2"        # Django integration for pytest
-pytest-cov = "^4.1.0"           # Measure code coverage during tests
-tox = "^3.24.5"                 # Test runner for python packages
-Faker = "^11.3.0"               # less fake fake data
-coveralls = "^3.3.1"            # Publish code coverage to coveralls
-beautifulsoup4 = "^4.10.0"      # Structure HTML documents into navigable things for test assertions
-mkdocs = "^1.2.3"               # Tool for serving rendered markdown docs
-polib = "^1.1.1"                # Tool for dealing with translation files
-factory-boy = "^3.2.1"          # Factory generation
-mypy = "^0.931"                 # Type checking
-click = "^8.0.3"                # Framework for building cli's
-ipdb = "^0.13.9"                # ipython breakpoints
-ruff = "*"                      # linter and code formatter
+django-debug-toolbar = "^3.2.4"
+Werkzeug = "^2.0.2"
+django-extensions = "^3.1.5"
+pytest = "^6.2.5"
+pytest-django = "^4.5.2"
+pytest-cov = "^4.1.0"
+tox = "^3.24.5"
+Faker = "^11.3.0"
+coveralls = "^3.3.1"
+beautifulsoup4 = "^4.10.0"
+mkdocs = "^1.2.3"
+polib = "^1.1.1"
+factory-boy = "^3.2.1"
+mypy = "^0.931"
+click = "^8.0.3"
+ipdb = "^0.13.9"
+ruff = "*"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/farridav/django-jazzmin/issues"
@@ -78,12 +78,12 @@ extend-exclude = ["migrations"]
 
 [tool.ruff.lint]
 select = [
-    "E",    # PEP8 errors
-    "W",    # PEP8 warnings
-    "F",    # PyFlakes
-    "I",    # isort
-    "C",    # mccabe
-    "T201", # flake8-print
+    "E",
+    "W",
+    "F",
+    "I",
+    "C",
+    "T201",
 ]
 
 [tool.ruff.lint.isort]
@@ -106,7 +106,6 @@ legacy_tox_ini = """
 envlist =
     django4-{python3.8,python3.9,python3.10,python3.11,python3.12},
     django5-{python3.10,python3.11,python3.12},
-    # run one of the tests again but with coverage
     coveralls-django4-python3.12,
 skipsdist = True
 
@@ -126,7 +125,7 @@ commands =
     {envpython} -m ruff check jazzmin
     {envpython} -m pytest
 deps =
-    django-jazzmin  # Installing self to allow automatic getting of `version` which needs `django-jazzmin` to be install to get information about the package.
+    django-jazzmin
     pytest
     pytest-django
     pytest-cov
@@ -151,7 +150,6 @@ commands =
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
-
 
 [[tool.mypy.overrides]]
 module = [
