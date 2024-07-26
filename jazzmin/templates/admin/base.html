@@ -5,7 +5,7 @@
 {% get_jazzmin_ui_tweaks as jazzmin_ui %}
 
 <!DOCTYPE html>
-<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<html lang="{{ LANGUAGE_CODE|default:"mn" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -157,7 +157,7 @@
                         <span class="dropdown-header">{% trans 'Профайл' %}</span>
                         <div class="dropdown-divider"></div>
                         <a href="{% url 'admin:password_change' %}" class="dropdown-item">
-                            <i class="fas fa-key mr-2"></i> {% trans 'Change password' %}
+                            <i class="fas fa-key mr-2"></i> {% trans 'Нууц үг солих' %}
                         </a>
                         <div class="dropdown-divider"></div>
                         {% get_user_menu user request.current_app|default:"admin" as user_menu %}
@@ -169,9 +169,12 @@
                         {% endfor %}
                         <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
                             {% csrf_token %}
-                            <button type="submit" class="dropdown-item"><i class="fa fa-sign-out mr-2"></i> {% translate 'Log out' %}</button>
+                            <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt mr-2"></i> {% translate 'Гарах' %}</button>
                         </form>
                         <div class="dropdown-divider"></div>
+                        {% if perms|can_view_self %}
+                            <a href="{% jazzy_admin_url request.user request.current_app|default:"admin" %}" class="dropdown-item dropdown-footer">{% trans 'Шутг удирдлага' %}</a>
+                        {% endif %}
                     </div>
                 </li>
             </ul>
@@ -317,15 +320,6 @@
 
         {% endblock %}
     </div>
-
-{% block footer %}
-    {% if not is_popup %}
-        {% if jazzmin_settings.show_ui_builder %}
-            {% include 'jazzmin/includes/ui_builder_panel.html' %}
-        {% endif %}
-    {% endif %}
-{% endblock %}
-
 </div>
 
 {% if jazzmin_settings.show_ui_builder %}
